@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- (A) MAIN MENU -->
+<div id="screenA">
+    <div class="mItem" onclick="cards.view('v')">
+      <div class="mi">view_array</div>
+      <div class="mTxt">View Cards</div>
+    </div>
+    <div class="mItem" onclick="cards.view('m')">
+      <div class="mi">edit</div>
+      <div class="mTxt">Manage Cards</div>
+    </div>
+  
+    
+  </div>
+  
+  <!-- (B) MANAGE/VIEW CARDS -->
+  <div id="screenB" class="hide">
+    <!-- (B1) CARDS WRAPPER -->
+    <div id="bCard"></div>
+  
+    <!-- (B2) CONTROLS -->
+    <div id="bManage">
+      <div class="mi" onclick="cards.screen(0)">reply</div>
+      <div class="mi bManage" onclick="cards.delete()">clear</div>
+      <div class="mi bManage" onclick="cards.add()">add</div>
+      <div class="mi" onclick="cards.move()">navigate_before</div>
+      <div class="mi" onclick="cards.move(1)">navigate_next</div>
+      <div id="bCardCount">
+        <span id="bCardNow"></span> / <span id="bCardAll"></span>
+      </div>
+    </div>
+  </div>
+  <script src="/index.js"></script>
+</body>
+</html>
