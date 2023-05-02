@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flash Cards </title>
+    <title>Document</title>
    
 </head>
 <style>
@@ -15,6 +15,22 @@
     font-weight: 400;
     src: url(https://fonts.gstatic.com/s/materialicons/v138/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2')
 }
+
+@media only screen and (max-width: 500px) {
+    body,
+    #screenA,
+    #screenB {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+  }
 
 .mi {
     font-family: "Material Icons";
@@ -51,10 +67,11 @@ body,
     flex-direction: column;
 }
 
-body {
-    background-image: radial-gradient(rgb(50, 110, 75), rgb(3, 184, 175), rgb(255, 0, 255));
-  
+#screenA,
+#screenB {
+    opacity: 1;
 }
+
 
 .hide {
     display: none !important;
@@ -142,6 +159,7 @@ body {
     font-size: 20px;
 }
 
+
 /* (D3) CARD FILP */
 .card {
     transition: transform 0.5s;
@@ -190,7 +208,8 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 50px;
     color: #f5ee03;
-    margin-top: 100px;
+  
+ 
  
 }
 
@@ -201,7 +220,7 @@ body {
   background-image: linear-gradient(
     -225deg,
     #f4f1f5 0%,
-    #7700ff 29%,
+    #f1edf7 29%,
     #0025fa 67%,
     #eeff00 100%
   );
@@ -223,13 +242,29 @@ body {
     background-position: 200% center;
   }
 }
-
+.body{    
+    content: "";
+    background-image: url("/am_.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    
+    
+}
 
 
 
 
 </style>
-<body>
+
+
+
+
+
+<body class="body">
 
 
     <div class="container">
@@ -238,7 +273,7 @@ body {
             <h5 class="animate-charcter"> Welcome Paula Freire</h5>
           </div>
         </div>
-        <img src="am.jpg" alt="">
+     
       </div>
 
 
